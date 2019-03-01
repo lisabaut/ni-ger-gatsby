@@ -37,7 +37,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build:staging": "ACTIVE_ENV=staging gatsby build --prefix-paths",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "lint": "eslint ./src",
     "start": "npm run develop",
