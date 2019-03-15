@@ -14,7 +14,8 @@ module.exports = {
     description: config.siteMetadata.description,
     author: config.siteMetadata.author,
     lang: config.siteMetadata.lang,
-    keywords: config.siteMetadata.keywords
+    keywords: config.siteMetadata.keywords,
+    heroTexts: config.siteMetadata.heroTexts
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
