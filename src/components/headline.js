@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Separator = styled.span`
@@ -23,5 +24,13 @@ const Headline = ({ children, keepLeft }) => (
     <Separator keepLeft={keepLeft}/>
   </>
 )
+
+Headline.propTypes = {
+  children: PropTypes.node.isRequired,
+  keepLeft: PropTypes.bool
+}
+Headline.defaultProps = {
+  keepLeft: false
+}
 
 export default Headline

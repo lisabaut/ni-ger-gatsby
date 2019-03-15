@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Headline from './headline'
@@ -27,13 +28,19 @@ const Intros = ({ introNodes }) => {
         <SingleColumn key={node.id}>
           <Headline>{node.frontmatter.title}</Headline>
           <div
-            className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: node.html }}
           />
         </SingleColumn>
       ))}
     </ColumnsWrap>
   )
+}
+Intros.propTypes = {
+  introNodes: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    frontmatter: PropTypes.shape({ title: PropTypes.string.isRequired }),
+    html: PropTypes.string.isRequired
+  }))
 }
 
 export default Intros

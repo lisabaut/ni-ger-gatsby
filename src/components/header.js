@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
@@ -11,7 +10,7 @@ const Container = styled.header`
 `
 
 const HeadlinesWrap = styled.div`
-    padding: 1.45rem 1.0875rem;
+    padding: 2rem 1.0875rem 1.45rem;
     text-align: center;
     margin-bottom: 15px;
 
@@ -29,7 +28,7 @@ const Headline = styled.h2`
     }
 `
 
-const Header = ({ children }) => (
+const Header = () => (
   <StaticQuery
     query={graphql`
       query HeroTextsQuery {
@@ -56,13 +55,5 @@ const Header = ({ children }) => (
     }}
   />
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

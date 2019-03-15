@@ -11,7 +11,7 @@ const Container = styled.footer`
   text-align: center;
 `
 
-const Footer = ({ data }) => (
+const Footer = () => (
   <StaticQuery
     query={graphql`
       query TitleQuery {
