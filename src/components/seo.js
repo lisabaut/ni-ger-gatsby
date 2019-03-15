@@ -22,8 +22,6 @@ function SEO ({ description, lang, meta, keywords, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = (keywords.length > 0 && keywords) || site.siteMetadata.keywords
-  console.log('site.siteMetadata.keywords', site.siteMetadata.keywords)
-
   return (
     <Helmet
       htmlAttributes={{
