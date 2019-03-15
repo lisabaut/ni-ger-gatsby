@@ -13,6 +13,8 @@ module.exports = {
     title: config.siteMetadata.title,
     description: config.siteMetadata.description,
     author: config.siteMetadata.author,
+    lang: config.siteMetadata.lang,
+    keywords: config.siteMetadata.keywords
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
