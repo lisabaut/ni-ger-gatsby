@@ -31,13 +31,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: config.siteMetadata.title,
+        short_name: config.siteMetadata.title,
         start_url: `/`,
         background_color: `#ffb8a7`,
         theme_color: `#ffb8a7`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`
+        icon: `src/images/icon.png`,
+        icons: [
+          {
+            src: `/favicons/icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     {
