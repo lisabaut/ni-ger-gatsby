@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -18,10 +18,14 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Intros introNodes={intros} />
-      <Separator />
-      {mainNodes.map(node => (
-        <Main key={node.id} title={node.frontmatter.title} content={node.html} />)
-      )}
+      {mainNodes && mainNodes.length > 0 &&
+        <Fragment>
+          <Separator />
+          {mainNodes.map(node => (
+            <Main key={node.id} title={node.frontmatter.title} content={node.html} />)
+          )}
+        </Fragment>
+      }
     </Layout>
   )
 }

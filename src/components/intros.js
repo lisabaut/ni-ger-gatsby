@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import Headline from './headline'
 
 const ColumnsWrap = styled.div`
-  margin-bottom: 40px;
-
   @media (min-width: 700px) {
     display: flex;
   }
