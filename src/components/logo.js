@@ -15,7 +15,7 @@ const LogoWrap = styled.div`
 `
 
 const SVG = styled.svg`
-       fill: ${ props => props.theme.headerColor };
+       fill: #292929;
 `
 
 const Logo = () =>
