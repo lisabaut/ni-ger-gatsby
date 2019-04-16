@@ -37,8 +37,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build:staging": "ACTIVE_ENV=staging gatsby build --prefix-paths",
-    "build": "gatsby build --prefix-paths && npm run 404",
+    "build:staging": "npm run clean-files && ACTIVE_ENV=staging gatsby build --prefix-paths",
+    "build": "npm run clean-files && gatsby build --prefix-paths && npm run 404",
+    "clean-files": "rm -rf public && rm -rf .cache",
     "develop": "gatsby develop",
     "404": "cp src/htaccess public/",
     "post404": "node scripts/rename",
