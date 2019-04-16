@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   p, ul {
     line-height: 22px;
-    font-size: 13px
+    font-size: 14px
   }
   @media (min-width: 700px) {
     p, ul {
@@ -54,8 +54,8 @@ export const theme = {
   light: '#f4f4f4',
   dark: '#222',
   background: '#ffffff',
-  textColor: '#717171',
-  headerColor: '#232323',
+  textColor: '#797979',
+  headerColor: '#403b3a',
   headerFont: `"Playfair Display", serif`,
   bodyFont: `"Lucida Grande", sans-serif`,
 }
