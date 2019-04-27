@@ -22,10 +22,12 @@ function SEO ({ description, lang, meta, keywords, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = (keywords.length > 0 && keywords) || site.siteMetadata.keywords
+  const language = lang || site.siteMetadata.lang
+
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        language
       }}
       title={title}
       titleTemplate={`%s | ${ site.siteMetadata.title }`}
@@ -77,7 +79,7 @@ function SEO ({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: '',
   meta: [],
   keywords: [],
 }
